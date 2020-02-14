@@ -1,0 +1,18 @@
+version: '2.1'
+
+services:
+
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+
+  sample1:
+    build: ./sample-app
+    environment:
+      SERVICE_NAME: 'sample1'
+
+  sample2:
+    build: ./sample-app
+    environment:
+      SERVICE_NAME: 'sample2'
